@@ -3,7 +3,7 @@ CFLAGS += -g
 
 CFLAGS += -Wextra
 
-
+CC = gcc
 
 VFLAGS  = --quiet
 VFLAGS += --tool=memcheck
