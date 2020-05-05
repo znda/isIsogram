@@ -10,3 +10,6 @@ Beispiele für Isogramme:
 Beispiel für Nicht-Isogramme:
 - Buchstabe --> 2x b
 - Isogramm --> 2x m
+
+## Tests ausführen
+'''make'''

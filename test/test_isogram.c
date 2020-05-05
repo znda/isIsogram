@@ -9,10 +9,9 @@ void test_empty_string(void)
 
 int main(void)
 {
-   UnityBegin("test/test_isogram.c");
+   UnityBegin("isIsogram");
 
    RUN_TEST(test_empty_string);
-
 
    UnityEnd();
    return 0;
