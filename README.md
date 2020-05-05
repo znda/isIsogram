@@ -12,4 +12,4 @@ Beispiel für Nicht-Isogramme:
 - Isogramm --> 2x m
 
 ## Tests ausführen
-'''make'''
+```make```
