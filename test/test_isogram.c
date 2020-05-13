@@ -30,10 +30,13 @@ void test_short_strings() {
     TEST_ASSERT_TRUE(is_isogram("xyz"));
     TEST_ASSERT_TRUE(is_isogram("def"));
 
+    TEST_ASSERT_TRUE(is_isogram("aa"));
+    TEST_ASSERT_TRUE(is_isogram("aabb"));
+    TEST_ASSERT_TRUE(is_isogram("aabbcc"));
+
     //negative Tests
-    TEST_ASSERT_FALSE(is_isogram("aa"));
-    TEST_ASSERT_FALSE(is_isogram("bb"));
-    TEST_ASSERT_FALSE(is_isogram("cc"));
+    TEST_ASSERT_FALSE(is_isogram("aab"));
+    TEST_ASSERT_FALSE(is_isogram("dee"));
 }
 
 void test_long_strings() {
@@ -75,6 +78,7 @@ void test_mixed_case_strings() {
 void test_special_characters_strings() {
     //positive Tests
     TEST_ASSERT_TRUE(is_isogram("ab!!c!?%"));
+    TEST_ASSERT_TRUE(is_isogram("aabb!!cc!?%"));
 
     //negative Tests
     TEST_ASSERT_FALSE(is_isogram("!abbc??$"));
@@ -87,10 +91,6 @@ void test_digit_strings() {
     //negative Tests
     TEST_ASSERT_FALSE(is_isogram("123451"));
 }
-
-// special characters are ignored
-//any number of occurences is fine e.g. aabbcc
-
 
 int main(void)
 {
