@@ -35,8 +35,7 @@ void test_short_strings() {
     TEST_ASSERT_TRUE(is_isogram("aabbcc"));
 
     //negative Tests
-    TEST_ASSERT_FALSE(is_isogram("aab"));
-    TEST_ASSERT_FALSE(is_isogram("dee"));
+    TEST_ASSERT_FALSE(is_isogram("aab"));    TEST_ASSERT_FALSE(is_isogram("dee"));
 }
 
 void test_long_strings() {

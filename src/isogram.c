@@ -42,17 +42,18 @@ char firstChar(const char* arr, int len){
 
 bool is_isogram(const char phrase[]){
     int len = strlen(phrase);
-    int oldOccurences, newOccurences = countChar(phrase, firstChar(phrase, len), len);
+    int newOccurences = countChar(phrase, firstChar(phrase, len), len);
+    int oldOccurences;
     for (int i=0; i<len; ++i){
+        oldOccurences = newOccurences;
         char currentChar = phrase[i];
         if(inspectChar(&currentChar) == -1){
             continue;
         }
+        newOccurences = countChar(phrase, currentChar, len);
         if(oldOccurences != newOccurences){
             return false;
         }
-        oldOccurences = newOccurences;
-        newOccurences = countChar(phrase, currentChar, len);
     }
     return true;
 }
