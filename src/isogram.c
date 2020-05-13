@@ -8,15 +8,14 @@ bool is_isogram(const char phrase[]){
         if(currentChar == ' '){
             continue;
         }
-
+        if (currentChar >= 'A' && currentChar <= 'Z'){
+            currentChar = currentChar + ('a'-'A');
+        }
         int occurences = 0;
         for(int j=0; j<len; ++j){
             char checkChar = phrase[j];
             if(checkChar == ' '){
             continue;
-            }
-            if (currentChar >= 'A' && currentChar <= 'Z'){
-            currentChar = currentChar + ('a'-'A');
             }
             if (checkChar >= 'A' && checkChar <= 'Z'){
             checkChar = checkChar + ('a'-'A');
