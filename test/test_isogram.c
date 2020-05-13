@@ -74,10 +74,10 @@ void test_mixed_case_strings() {
 
 void test_special_characters_strings() {
     //positive Tests
-    TEST_ASSERT_TRUE(is_isogram("!?%"));
+    TEST_ASSERT_TRUE(is_isogram("ab!!c!?%"));
 
     //negative Tests
-    TEST_ASSERT_FALSE(is_isogram("!??$"));
+    TEST_ASSERT_FALSE(is_isogram("!abbc??$"));
 }
 
 void test_digit_strings() {
@@ -87,6 +87,10 @@ void test_digit_strings() {
     //negative Tests
     TEST_ASSERT_FALSE(is_isogram("123451"));
 }
+
+// special characters are ignored
+//any number of occurences is fine e.g. aabbcc
+
 
 int main(void)
 {
